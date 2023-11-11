@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author Yug
+ *
+ */
+module informationExpert {
+}
