@@ -1,6 +1,6 @@
 package service;
 
-import model.User;  
+import model.User;  // Make sure you have this import statement
 
 import java.util.HashMap;
 import java.util.Map;
