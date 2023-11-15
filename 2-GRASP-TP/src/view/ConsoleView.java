@@ -17,6 +17,7 @@ public class ConsoleView {
         this.scanner = new Scanner(System.in);
         this.loginController = loginController;
         this.registrationController = registrationController;
+       
     }
 
     // Affiche le menu principal et gère l'interaction avec l'utilisateur
