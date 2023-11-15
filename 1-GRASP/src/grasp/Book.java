@@ -1,8 +1,9 @@
 // Book.java
 package grasp;
 
+// Implémente les principes Information Expert (contient l'information sur le livre), Creator (crée l'instance de Book) et High Cohesion (fonctionnalités liées regroupées)
 public class Book {
-    private String title;
+    private final String title;
     private boolean available;
 
     // Constructeur pour initialiser le livre avec un titre et le marquer comme disponible

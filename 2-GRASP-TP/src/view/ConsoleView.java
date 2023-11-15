@@ -28,7 +28,7 @@ public class ConsoleView {
             System.out.print("Choisissez une option : ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Nettoyer le caractère de nouvelle ligne
+            scanner.nextLine(); // Nettoyer  le caractère de nouvelle ligne
 
             switch (choice) {
                 case 1:

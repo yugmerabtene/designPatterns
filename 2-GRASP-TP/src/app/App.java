@@ -1,5 +1,4 @@
 package app;
-import model.User;
 import controller.LoginController;
 import controller.RegistrationController;
 import service.RegistrationService;

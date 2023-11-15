@@ -1,25 +1,31 @@
 // Library.java
 package grasp;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
+// Implémente les principes Creator (crée les instances de Book) et Information Expert (possède l'information sur les livres)
 public class Library {
-    private Map<String, Book> books;
+    // Utilisation du polymorphisme pour permettre la gestion de différents types de livres si nécessaire
+    private List<Book> books;
 
-    // Constructeur pour initialiser la bibliothèque avec une collection de livres
+    // Constructor
     public Library() {
-        this.books = new HashMap<>();
+        this.books = new ArrayList<>();
     }
 
-    // Méthode pour ajouter un livre à la bibliothèque (Principe Creator)
+    // Ajouter un livre à la bibliothèque
     public void addBook(Book book) {
-        books.put(book.getTitle(), book);
+        books.add(book);
     }
 
-    // Méthode pour vérifier si un livre est disponible pour l'emprunt
+    // Vérifier si un livre est disponible pour l'emprunt
     public boolean isBookAvailableForLoan(String title) {
-        Book book = books.get(title);
-        return book != null && book.isAvailable();
+        for (Book book : books) {
+            if (book.getTitle().equals(title) && book.isAvailable()) {
+                return true;
+            }
+        }
+        return false;
     }
 }
